@@ -1,0 +1,8 @@
+# Branding
+
+* The name:  topbeat
+* Primary color: #10B981  (emerald 500)
+* Secondary color: #1F2937
+* Accent color: #ECFDF5 (emerald 50)
+* Logo: ?
+* Typography: ?
