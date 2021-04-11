@@ -5,4 +5,5 @@
 * Secondary color: #1F2937 (cool gray 800)
 * Accent color: #ECFDF5 (emerald 50)
 * Logo: ?
-* Typography: ?
+* Typography: font-sans-Roboto
+*
