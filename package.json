@@ -1,0 +1,29 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "description": "This repository contains sources for first team project:\r Creating a spotify clone.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mix watch "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/top-interns/spotify-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/top-interns/spotify-clone/issues"
+  },
+  "homepage": "https://github.com/top-interns/spotify-clone#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "tailwindcss": "^2.1.1"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.16",
+    "postcss-cli": "^8.3.1"
+  }
+}
