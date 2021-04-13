@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore compiled javascript and tailwindcss
+public/js/
+public/css/
