@@ -4,7 +4,7 @@
   "description": "This repository contains sources for first team project:\r Creating a spotify clone.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=production npx mix watch "
+    "dev": "npx mix watch "
   },
   "repository": {
     "type": "git",
