@@ -9,14 +9,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        emerald: colors.emerald,
-        coolgray: colors.coolGray,
-        orange: colors.orange
+        topbeat : {
+          page: '#161616',
+          player: '#181818',
+          button: '#121212',
+          toolbar: '#202020'
+        },
+        emerald: colors.emerald
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ['responsive','hover', 'focus'],
+    },
   },
   plugins: [],
 }

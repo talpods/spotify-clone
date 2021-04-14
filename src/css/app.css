@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-target {
+    display: none;
+}
+
+.hover-trigger:hover .hover-target {
+    display: block;
+}
+
+
+.play-btn .state1 {
+    display: block;
+}
+
+.play-btn .state2 {
+    display: none;
+}
+
+.play-btn.active {
+    display:block;
+}
+
+.play-btn.active .state1 {
+    display:none;
+}
+
+.play-btn.active .state2 {
+    display: block;
+}
