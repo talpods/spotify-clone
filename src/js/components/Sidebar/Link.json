@@ -1,0 +1,18 @@
+{
+    "comment": "link",
+    "tagName": "a",
+    "className": "link flex p-2 text-xs font-bold hover:bg-topbeat-toolbar rounded text-emerald-50 cursor-pointer",
+    "children": [
+        {
+            "comment": "link-icon",
+            "tagName": "img",
+            "className": "link-icon inline-block w-3 h-3 mr-2",
+            "attributes": [
+                {
+                    "name": "alt",
+                    "value": "link icon"
+                }
+            ]
+        }
+    ]
+}

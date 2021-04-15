@@ -1,0 +1,5 @@
+{
+    "comment": "sidebar",
+    "tagName": "div",
+    "className": "sidebar min-h-screen p-2 border-emerald-50 border-r-2 w-44 text-emerald-50"
+}
