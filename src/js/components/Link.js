@@ -13,21 +13,16 @@ class Link extends Component {
         this.element.appendChild(document.createTextNode(props.text));
         this.to = props.to;
 
-        this.highlight = props.highlight;
+        this.highlight(props.highlight);
         this.text = props.text;
     }
 
-
-    set highlight(val) {
+    highlight(val) {
         if (val) {
             this.element.classList.add("highlight");
         } else {
             this.element.classList.remove("highlight");
         }
-    }
-
-    get highlight() {
-        return this.classList.contains("highlight");
     }
 
     get to () {
