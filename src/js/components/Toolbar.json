@@ -1,0 +1,18 @@
+{
+    "comment": "toolbar",
+    "tagName": "div",
+    "className": "toolbar text-white flex bg-topbeat-toolbar h-14  ",
+    "textConent": "TopBeat Toolbar",
+    "children": [
+        {
+            "comment": " search ",
+            "tagName": "div",
+            "className": "outline-none px-32 py-1 ml-96 mt-3 rounded-full bg-white  text-black"
+        },
+        {
+            "comment": "front btn ",
+            "tagName": " img",
+            "className": "..."
+        }
+    ]
+}
