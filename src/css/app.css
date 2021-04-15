@@ -30,3 +30,7 @@
 .play-btn.active .state2 {
     display: block;
 }
+
+.highlight {
+    background-color: #282828;
+}
