@@ -11,8 +11,10 @@ class Link extends Component {
         setImageSource(props.img, this.element.querySelector(".link-icon"));
 
         this.element.appendChild(document.createTextNode(props.text));
+        this.to = props.to;
 
         this.highlight = props.highlight;
+        this.text = props.text;
     }
 
 
@@ -26,6 +28,14 @@ class Link extends Component {
 
     get highlight() {
         return this.classList.contains("highlight");
+    }
+
+    get to () {
+        return this.element.getAttribute("href");
+    }
+
+    set to (val) {
+        this.element.setAttribute("href", val);
     }
 }
 
