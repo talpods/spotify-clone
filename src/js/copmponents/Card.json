@@ -1,0 +1,78 @@
+{
+    "comment": "card",
+    "tagName": "div",
+    "className": "card relative p-3 m-2 rounded-md h-52 w-44 bg-topbeat-player text-emerald-50 hover-trigger hover:bg-gray-900",
+    "children": [
+        {
+            "comment": "image from server",
+            "tagName": "img",
+            "className": "image block w-40 h-40",
+            "attributes": [
+                {
+                    "name": "alt",
+                    "value": "image"
+                },
+                {
+                    "name": "src",
+                    "value": "https://topinterns.saleem.dev/images/music-categories/2.png"
+                }
+            ]
+        },
+        {
+            "comment": "icon container",
+            "tagName": "div",
+            "className": "absolute rounded-full bg-topbeat-player top-4 left-4",
+            "children": [
+                {
+                    "comment": "icon",
+                    "tagName": "img",
+                    "className": "w-4 h-4",
+                    "attributes": [
+                        {
+                            "name": "src",
+                            "value": "/img/favicon.png"
+                        },
+                        {
+                            "name": "alt",
+                            "value": "card icon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "comment": "card title",
+            "tagName": "h2",
+            "className": "title absolute left-0 right-0 font-bold text-center top-8 text-emerald-50",
+            "textContent": "Hip Hop"
+        },
+        {
+            "comment": "card text",
+            "tagName": "p",
+            "className": "text px-0 py-2 text-sm text-emerald-50",
+            "textContent" : "hip-hop"
+        },
+        {
+            "comment": "play button",
+            "tagName": "button",
+            "className": "play-btn absolute rounded-full right-4 bottom-10 hover-target focus:outline-none play-btn",
+            "children": [
+                {
+                    "comment": "play icon",
+                    "tagName": "img",
+                    "className": "state1",
+                    "attributes": [
+                        {
+                            "name": "alt",
+                            "value": "play state 1 icon"
+                        },
+                        {
+                            "name": "src",
+                            "value": "/img/buttonplay.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
