@@ -1,6 +1,6 @@
 "use strict";
 
-import Component, {setImageSource, setValue} from '../lib/Component';
+import Component, {setImageSource} from '../../lib/Component';
 import data from './Link.json';
 
 class Link extends Component {
