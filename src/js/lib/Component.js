@@ -54,9 +54,15 @@ class Component {
         this.render = null;
     }
 
-    mount(child) {
+
+    mount(parent) {
+        this.element.parent = parent;
+        parent.appendChild(this.element);
+    }
+
+    append(child) {
         child.parent = this;
-        this.element.appendChild(child);
+        this.element.appendChild(child.element);
     }
 
     remove() {
