@@ -1,6 +1,6 @@
 "use strict";
 
-import Component, {setImageSource, setValue} from './Component';
+import Component, {setImageSource, setValue} from '../lib/Component';
 
 import config from "./Card.json";
 
