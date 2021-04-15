@@ -1,0 +1,17 @@
+{
+    "comment": "card collection",
+    "tagName": "div",
+    "className": "card-collection m-10",
+    "children": [
+        {
+            "comment": "collection title",
+            "tagName": "div",
+            "className": "title p-1 mx-2 font-bold text-md text-emerald-50"
+        },
+        {
+            "comment": "card container",
+            "tagName": "div",
+            "className": "flex align-middle cards"
+        }
+    ]
+}
