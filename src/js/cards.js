@@ -3,6 +3,7 @@ import {getTracks, getCategories, search, getCategorySlug} from './lib/data';
 import Card from './components/Card';
 import CardCollection from './components/CardCollection';
 
+// the context will be used later for play / stop events
 const context = {};
 
 const fillCategories = async (container) => {
