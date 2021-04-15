@@ -1,7 +1,7 @@
 "use strict";
 
-import Component from '../lib/Component';
-import Link from '../components/Link';
+import Component from '../../lib/Component';
+import Link from './Link';
 
 import data from './SideMenu.json';
 
