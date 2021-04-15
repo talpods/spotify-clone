@@ -1,0 +1,5 @@
+{
+    "comment": "sidebar-menu",
+    "tagName": "div",
+    "className": "menu mb-4"
+}
