@@ -4,10 +4,15 @@ import Component from "../../lib/Component";
 import data from "./PlayerAudio.json";
 
 class PlayerAudio extends Component {
-    constructor() {
+    constructor(props) {
         super(data);
         this.element.controls = "controls";
         this.element.controlsList = "nodownload"
+        this.song = props.song;
+    }
+
+    set song (value) {
+        this.element.src = value;
     }
 }
 
