@@ -11,10 +11,9 @@ import Toolbar from './components/Toolbar';
 
 // TODO: move to Toolbar component
 const mountToolbar = (container) => {
-    let toolBarContainer = document.getElementById("toolbar");
-    const tb = new Toolbar();
-    tb.mount(toolBarContainer);
-    return toolBarContainer;
+    const component = new Toolbar();
+    component.mount(container);
+    return component;
 };
 
 const context = {};
@@ -30,7 +29,7 @@ const  palyerContainer = document.querySelector(".palyer-container");
 
 (async () => {
     context.sidebar = mountSidebar(sidebarContainer);
-    //context.toolbar = mountToolbar(toolbarContainer);
+    // context.toolbar = mountToolbar(toolbarContainer);
 
     context.categories = mountCategories(categoriesContainer);
     context.tracks = mountTracks(traksContainer);
