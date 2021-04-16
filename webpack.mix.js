@@ -6,6 +6,7 @@ mix.js('src/js/app.js', 'js')
    .js('src/js/sidebar.js','js')
    .js('src/js/toolbar.js','js')
    .js('src/js/player.js','js')
+   .js('src/js/home.js','js')
     .postCss("src/css/app.css", "css", [
         require("tailwindcss"),
     ])

@@ -1,0 +1,5 @@
+{
+    "comment": "player-audio",
+    "tagName": "audio",
+    "className": "h-4 w-3/4  md:w-3/6 lg:w-4/12 focus:outline-none"
+}

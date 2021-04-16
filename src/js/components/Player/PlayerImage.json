@@ -1,0 +1,15 @@
+{
+    "comment": "player-image",
+    "tagName": "img",
+    "className": "w-10 h-10 hidden md:flex",
+    "attributes": [
+        {
+            "name": "alt",
+            "value": "song image"
+        },
+        {
+            "name": "src",
+            "value": ""
+        }
+    ]
+}

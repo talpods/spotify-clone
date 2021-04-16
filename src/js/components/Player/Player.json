@@ -1,0 +1,5 @@
+{
+    "comment": "player",
+    "tagName": "div",
+    "className": "h-14 p-2 flex flex-row items-center justify-center md:justify-between bg-topbeat-player text-white space-x-2"
+}

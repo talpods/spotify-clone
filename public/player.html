@@ -8,8 +8,29 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="img/favicon.png">
 </head>
-<body>
+<body class="font-sans bg-black">
 
-    <script src="js/sidebar.js"></script>
+    <div id="player"></div>
+
+
+    <template>
+        <div class="h-14 p-2 flex flex-row items-center justify-center md:justify-between bg-topbeat-player text-white space-x-2">
+
+            <!-- image -->
+            <img class="w-10 h-10 hidden md:flex" src="https://topinterns.saleem.dev/images/tracks/10.png" alt="song">
+
+            <!-- control -->
+            <audio id="audio" class="h-4 w-3/4  md:w-3/6 lg:w-4/12 focus:outline-none" controls controlsList="nodownload"></audio>
+
+            <!-- info -->
+            <div class="hidden md:block">
+                <div class="text-sm">Classic</div>
+                <small class="text-xs">Adrian Gurvitz</small>
+            </div>
+
+        </div>
+    </template>
+
+    <script src="js/player.js"></script>
 </body>
 </html>
