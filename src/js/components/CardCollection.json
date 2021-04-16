@@ -1,7 +1,7 @@
 {
     "comment": "card collection",
     "tagName": "div",
-    "className": "card-collection mx-6",
+    "className": "card-collection ",
     "children": [
         {
             "comment": "collection title",
