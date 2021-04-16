@@ -1,0 +1,17 @@
+{
+    "comment": "play-info",
+    "tagName": "div",
+    "className": "hidden md:block",
+    "children": [
+        {
+            "comment": "play-title",
+            "tagName": "div",
+            "className": "title text-sm"
+        },
+        {
+            "comment": "play-author",
+            "tagName": "small",
+            "className": "author text-xs"
+        }
+    ]
+}
