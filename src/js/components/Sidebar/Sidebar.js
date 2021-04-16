@@ -17,4 +17,14 @@ class Sidebar extends Component {
     }
 }
 
+const mountSidebar = (container, highlightMenu = "Home") => {
+    const component = new Sidebar();
+    component.menu.highlight(highlightMenu);
+    component.mount(container);
+}
+
 export default Sidebar;
+
+export {
+    mountSidebar
+};
