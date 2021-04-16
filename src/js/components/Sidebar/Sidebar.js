@@ -21,6 +21,7 @@ const mountSidebar = (container, highlightMenu = "Home") => {
     const component = new Sidebar();
     component.menu.highlight(highlightMenu);
     component.mount(container);
+    return component;
 }
 
 export default Sidebar;
