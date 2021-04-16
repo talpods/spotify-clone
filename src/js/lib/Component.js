@@ -73,6 +73,14 @@ class Component {
         this.element.textContent = "";
     }
 
+    show(value) {
+        if (!value) {
+            this.element.classList.add("hidden");
+        } else {
+            this.element.classList.remove("hidden");
+        }
+    }
+
     addListener(event, callback) {
         this.addEventListener(event, callback);
     }
