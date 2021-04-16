@@ -23,7 +23,11 @@ module.exports = {
         'cards-4': 'repeat(4, 220px)',
         'cards-6': 'repeat(6, 220px)',
         'cards-7': 'repeat(7, 220px)',
+        'home': '200px 1fr'
       },
+      gridTemplateRows: {
+        'home' :  '70px 300px 580px 1fr 50px'
+      }
     },
   },
   variants: {
