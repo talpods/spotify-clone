@@ -1,4 +1,4 @@
-import {getTracks, getCategories, search, getCategorySlug} from './lib/data';
+import { getTracks, getCategories, search, getCategorySlug } from './lib/data';
 
 import Card from './components/Card';
 import CardCollection from './components/CardCollection';
@@ -10,7 +10,7 @@ const fillCategories = async (container) => {
     const categories = await getCategories();
     const cards = new CardCollection("Categories");
 
-    for(let category of categories) {
+    for (let category of categories) {
 
         const props = {
             title: category.title,
@@ -30,7 +30,7 @@ const fillTracks = async (container) => {
     const tracks = await getTracks();
     const cards = new CardCollection("Trakcs");
 
-    for(let track of tracks) {
+    for (let track of tracks) {
         const props = {
             title: track.title,
             text: track.author,
@@ -50,10 +50,13 @@ const fillTracks = async (container) => {
     try {
         context.categories = await fillCategories(document.querySelector("#categories"));
         context.tracks = await fillTracks(document.querySelector("#tracks"));
+
     } catch (error) {
         console.log(error);
     }
+
 })();
+
 
 
 

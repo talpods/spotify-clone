@@ -1,6 +1,12 @@
 "use strict";
 
-import Component from '../lib/Component';
+import Component, {
+    setValue,
+    getValue,
+    setImageSource,
+    setImageAlt
+
+} from '../lib/Component';
 import data from './Toolbar.json';
 
 class Toolbar extends Component {

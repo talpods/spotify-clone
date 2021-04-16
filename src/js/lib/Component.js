@@ -1,4 +1,4 @@
-"use strict";
+"use strict|";
 
 import elementFactory from '../lib/elementFactory';
 
@@ -25,7 +25,7 @@ const setImageAlt = (alt, element) => element.setAttribute("alt", alt);
  * @param {Element} element - target element
  */
 const setValue = (val, element) => {
-    if('value' in element) {
+    if ('value' in element) {
         element.value = val;
     } else {
         element.textContent = val;
@@ -39,10 +39,10 @@ const setValue = (val, element) => {
  * @returns value
  */
 const getValue = element => {
-    if('value' in element) {
+    if ('value' in element) {
         return element.value
     } else {
-       return  element.textContent;
+        return element.textContent;
     }
 }
 
