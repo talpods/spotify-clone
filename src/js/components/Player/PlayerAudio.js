@@ -12,7 +12,9 @@ class PlayerAudio extends Component {
     }
 
     set song (value) {
-        this.element.src = value;
+        if (value) {
+            this.element.src = value;
+        }
     }
 }
 
