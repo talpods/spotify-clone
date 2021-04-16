@@ -23,7 +23,7 @@ class Player extends Component {
     }
 
     update(data) {
-        this.image.image = data.image;
+        this.image.setImage(data.image);
         this.audio.song = data.song;
         this.info.title = data.title;
         this.info.author = data.author;
