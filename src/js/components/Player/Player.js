@@ -1,7 +1,7 @@
 "use strict";
 
 import Component from '../../lib/Component';
-import { isAuthenticated, login } from '../../lib/authentication';
+import { isAuthenticated } from '../../lib/authentication';
 import redirect from "../../lib/redirect";
 
 import data from './Player.json';
@@ -38,7 +38,6 @@ class Player extends Component {
             return;
         }
 
-        login();
         redirect.signup();
     }
 
