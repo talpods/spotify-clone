@@ -1,15 +1,4 @@
 "use strict";
-import Toolbar from './components/Toolbar';
-let toolBarContainer = document.getElementById("toolbar");
-
-
-
-
-
-
-
-
-
 
 
 

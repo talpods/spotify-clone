@@ -18,4 +18,9 @@ class Toolbar extends Component {
     }
 }
 
+const mountToolbar = (container) => {
+    const component = new Toolbar();
+    component.mount(container);
+    return component;
+};
 export default Toolbar;

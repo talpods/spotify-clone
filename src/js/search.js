@@ -20,9 +20,9 @@ const context = {};
 // select containers
 const sidebarContainer = document.querySelector(".sidebar-container");
 const toolbarContainer = document.querySelector(".toolbar-container");
-const categoriesContainer = document.querySelector(".categories-container");
+
 const traksContainer = document.querySelector(".traks-container");
-const playlistContainer = document.querySelector(".playlist-container");
+
 const palyerContainer = document.querySelector(".palyer-container");
 
 
