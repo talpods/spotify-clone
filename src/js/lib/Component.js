@@ -82,11 +82,11 @@ class Component {
     }
 
     addListener(event, callback) {
-        this.addEventListener(event, callback);
+        this.element.addEventListener(event, callback);
     }
 
     removeListener(event, callback) {
-        this.removeEventListener(event, callback);
+        this.element.removeEventListener(event, callback);
     }
 }
 
