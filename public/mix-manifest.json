@@ -5,5 +5,6 @@
     "/js/toolbar.js": "/js/toolbar.js",
     "/js/player.js": "/js/player.js",
     "/js/home.js": "/js/home.js",
+    "/js/search.js": "/js/search.js",
     "/css/app.css": "/css/app.css"
 }

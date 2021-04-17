@@ -1,18 +1,18 @@
 {
     "comment": "toolbar",
     "tagName": "div",
-    "className": "toolbar text-white flex bg-topbeat-toolbar h-14  ",
+    "className": " toolbar text-white flex bg-topbeat-toolbar h-14 ",
     "textConent": "TopBeat Toolbar",
     "children": [
         {
             "comment": " search ",
             "tagName": "div",
-            "className": "outline-none px-32 py-1 ml-96 mt-3 rounded-full bg-white  text-black"
+            "className": "search outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black"
         },
         {
-            "comment": "front btn ",
-            "tagName": " img",
-            "className": "..."
+            "comment": " login ",
+            "tagName": " div",
+            "className": "border- border-white bg-white text-black px-10 py-2 rounded-full"
         }
     ]
 }
