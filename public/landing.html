@@ -7,26 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LandingPage</title>
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="img/favicon.png">
+    <style>
+        .landing-head{
+            color: #10B981;
+            font-size: 700%;
+            font-weight: 800;
+            text-align: right;
+        }
+        .landing-text{
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 150%;
+
+        }
+    </style>
 </head>
 
-<body>
-    <nav >
-        <div class="bg-black">
-            <img src="img/logo.png">
+<body  style=" background-color: #2941AB;" class="font-sans">
+    <div class="hover flex justify-between">
+        <img class="object-none object-left-bottom" src="img/bubble1.png">
+        <div class="object-none justify-center mt-20 mr-20">
+            <div class=" landing-head">
+                Listening is <br> everything
+            </div>
+            <div class=" landing-text m-2 ">
+                Millions of songs. No credit card needed.
+            </div>
+            <button class="landing-text bg-emerald-500 focus:outline-none rounded-full py-2 px-4 m-8 border-4">
+                <a href="signup.html"> 
+                    Get Started
+                </a>
+                
+                </button>
         </div>
-        <div>
-            <a href="">Premium </a>
-            <a href="">Support </a>
-            <a href="">Download </a>
-            <a href="">Sign up </a>
-            <a href="">Log in </a>
-        </div>
-
-    </nav>
+        
+        <img class="object-right-top object-none"  src="img/bubble2.png">
+    </div>
 
     
 </body>
+
 
 </html>
