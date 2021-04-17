@@ -1,39 +1,41 @@
 "use strict";
 
+import {mountHome} from './components/Home/Home';
 import {mountSidebar} from "./components/Sidebar/Sidebar";
-import {mountCategories, mountTracks} from './components/CardCollection';
 import {mountPlayer} from './components/Player/Player'
 import {Track} from './components/Player/Track';
 
-//import {mount}
+//import {mountToolbar} from './components/Toolbar';
 
 import Toolbar from './components/Toolbar';
 
-// TODO: move to Toolbar component
+
 const mountToolbar = (container) => {
+    // Temporary solution until toolbar is finished:
+    const element = document.createElement("div")
+    element.className = "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10";
+    element.textContent = "toolbar";
+    container.appendChild(element);
+    return element;
+
+    // "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10"
+    /*
     const component = new Toolbar();
     component.mount(container);
     return component;
+    */
 };
+
+
+
 
 const context = {};
 
-// select containers
-const sidebarContainer = document.querySelector(".sidebar-container");
-const  toolbarContainer = document.querySelector(".toolbar-container");
-const  categoriesContainer = document.querySelector(".categories-container");
-const  traksContainer = document.querySelector(".traks-container");
-const  playlistContainer = document.querySelector(".playlist-container");
-const  palyerContainer = document.querySelector(".palyer-container");
-
+const container = document.querySelector(".root");
 
 (async () => {
-    context.sidebar = mountSidebar(sidebarContainer);
-    // context.toolbar = mountToolbar(toolbarContainer);
-
-    context.categories = mountCategories(categoriesContainer);
-    context.tracks = mountTracks(traksContainer);
-
-    context.palyer = mountPlayer(palyerContainer);
-
+    context.sidebar = mountSidebar(container);
+    context.toolbar = mountToolbar(container);
+    context.data = mountHome(container);
+    context.palyer = mountPlayer(container);
 })();
