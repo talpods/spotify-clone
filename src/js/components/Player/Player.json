@@ -2,12 +2,12 @@
     "auth": {
         "comment": "player",
         "tagName": "div",
-        "className": "player fixed left-0 bottom-0 right-0 h-14 p-2 flex flex-row items-center justify-center md:justify-between bg-topbeat-player text-white space-x-2"
+        "className": "player fixed left-0 bottom-0 right-0 h-14 z-50 p-2 flex flex-row items-center justify-center md:justify-between bg-topbeat-player text-white space-x-2"
     },
     "default": {
         "comment": "player",
         "tagName": "div",
-        "className": "player fixed left-0 bottom-0 right-0 h-14 px-2 flex flex-row justify-between px-2 h-14 items-center bg-gradient-to-r from-pink-400 to-blue-300 text-white",
+        "className": "player fixed left-0 bottom-0 right-0 h-14 z-50 px-2 flex flex-row justify-between px-2 h-14 items-center bg-gradient-to-r from-pink-400 to-blue-300 text-white",
         "children": [
             {
                 "comment": "left",
