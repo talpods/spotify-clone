@@ -106,3 +106,4 @@ dist
 # Ignore compiled javascript and tailwindcss
 public/js/
 public/css/
+public/images/
