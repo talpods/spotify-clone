@@ -3,7 +3,7 @@
 import {mountHome} from './components/Home/Home';
 import {mountSidebar} from "./components/Sidebar/Sidebar";
 import {mountPlayer} from './components/Player/Player'
-import {Track} from './components/Player/Track';
+
 
 //import {mountToolbar} from './components/Toolbar';
 
@@ -36,6 +36,6 @@ const container = document.querySelector(".root");
 (async () => {
     context.sidebar = mountSidebar(container);
     context.toolbar = mountToolbar(container);
-    context.data = mountHome(container);
     context.palyer = mountPlayer(container);
+    context.data = mountHome(container, context.palyer);
 })();
