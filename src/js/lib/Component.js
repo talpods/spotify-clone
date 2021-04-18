@@ -46,33 +46,57 @@ const getValue = element => {
     }
 }
 
-
+/**
+ * Base class for component object
+ */
 class Component {
-    constructor(data) {
+    /**
+     *
+     * @param {JSON} data - JSON containing DOM structure representation
+     */
+    constructor(data, props) {
         this.element = elementFactory(data);
         this.parent = null;
-        this.render = null;
+        this.props = props;
     }
 
 
+    /**
+     * nount() - method for mounting component to the parent DOM element
+     * @param {Element} parent - html parent element for mounting
+     */
     mount(parent) {
         this.element.parent = parent;
         parent.appendChild(this.element);
     }
 
+    /**
+     * append() - add a child component
+     * @param {Component} child - child component
+     */
     append(child) {
         child.parent = this;
         this.element.appendChild(child.element);
     }
 
+    /**
+     * remove() - remove component from DOM
+     */
     remove() {
         this.element.remove();
     }
 
+    /**
+     * reset() - reset the component content
+     */
     reset() {
         this.element.textContent = "";
     }
 
+    /**
+     * show() - display or hide the component
+     * @param {boolean} value - true / false
+     */
     show(value) {
         if (!value) {
             this.element.classList.add("hidden");
@@ -81,10 +105,27 @@ class Component {
         }
     }
 
-    addListener(event, callback) {
-        this.element.addEventListener(event, callback);
+    /**
+     * addListener() - method for adding a listener to the component
+     * @param {string} event - name of the event
+     * @param {function} callback - handler function
+     * @param {object} bindObj - object for binding if necessary to access this inside callback
+     * @returns - handler, it is useful for removing in case of binding
+     */
+    addListener(event, callback, bindObj) {
+        // if a bind object is passing we will bind it to
+        // preserve this reference in the handler
+        // more details in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+        const handler = bindObj ? callback.bind(bindObj) : callback;
+        this.element.addEventListener(event, handler);
+        return handler;
     }
 
+    /**
+     * removeListener() - remove listener from component
+     * @param {string} event - name of the event
+     * @param {callback} callback - handler to be removed
+     */
     removeListener(event, callback) {
         this.element.removeEventListener(event, callback);
     }
