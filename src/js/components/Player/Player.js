@@ -1,6 +1,9 @@
 "use strict";
 
 import Component from '../../lib/Component';
+import { isAuthenticated } from '../../lib/authentication';
+import redirect from "../../lib/redirect";
+
 import data from './Player.json';
 import PlayerImage from './PlayerImage';
 import PlayerAudio from './PlayerAudio';
@@ -10,23 +13,41 @@ import Track from './Track';
 
 class Player extends Component {
     constructor(props) {
-        super(data);
 
-        this.image = new PlayerImage(props);
-        this.image.mount(this.element);
+        const authenticated = isAuthenticated();
+        const json = authenticated ? data.auth : data.default;
 
-        this.audio  = new PlayerAudio(props);
-        this.audio.mount(this.element);
+        super(json);
 
-        this.info = new PlayerInfo(props);
-        this.info.mount(this.element);
+        if (isAuthenticated()) {
+            this.image = new PlayerImage(props);
+            this.image.mount(this.element);
+
+            this.audio = new PlayerAudio(props);
+            this.audio.mount(this.element);
+
+            this.info = new PlayerInfo(props);
+            this.info.mount(this.element);
+        } else {
+            this.addListener("click", this.signup);
+        }
+    }
+
+    signup({target}) {
+        if(target.tagName !== "BUTTON") {
+            return;
+        }
+
+        redirect.signup();
     }
 
     update(data) {
-        this.image.setImage(data.image);
-        this.audio.song = data.song;
-        this.info.title = data.title;
-        this.info.author = data.author;
+        if (isAuthenticated()) {
+            this.image.setImage(data.image);
+            this.audio.song = data.song;
+            this.info.title = data.title;
+            this.info.author = data.author;
+        }
     }
 }
 

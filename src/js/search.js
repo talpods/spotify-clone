@@ -27,7 +27,7 @@ const palyerContainer = document.querySelector(".palyer-container");
 
 
 (async () => {
-    context.sidebar = mountSidebar(sidebarContainer);
+    context.sidebar = mountSidebar(sidebarContainer, "Search");
     // context.toolbar = mountToolbar(toolbarContainer);
     context.tracks = mountTracks(traksContainer);
 

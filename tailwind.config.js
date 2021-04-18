@@ -13,7 +13,8 @@ module.exports = {
           page: '#161616',
           player: '#181818',
           button: '#121212',
-          toolbar: '#202020'
+          toolbar: '#202020',
+          landing: '#2941AB'
         },
         emerald: colors.emerald
       },
@@ -27,7 +28,10 @@ module.exports = {
       },
       gridTemplateRows: {
         'home' :  '70px 300px 580px 1fr 50px'
-      }
+      },
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/img/hero-pattern.svg')"
+       })
     },
   },
   variants: {

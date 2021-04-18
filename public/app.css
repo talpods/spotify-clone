@@ -39,22 +39,11 @@
     color: #10B981;
     font-size: 750%;
     font-weight: 800;
-    text-align: center;
-
+    text-align: right;
 }
 .landing-text{
     color: white;
     text-align: center;
     font-weight: bold;
 
-}
-
-
-.hero {
-    background-image: url("../images/hero-pattern.svg");
-    background-size: 175%;
-    background-position: 46% 4%;
-    -webkit-box-pack: center;
-    justify-content: center;
-    min-height: 846px;
 }
