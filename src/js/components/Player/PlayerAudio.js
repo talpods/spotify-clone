@@ -14,6 +14,7 @@ class PlayerAudio extends Component {
     set song (value) {
         if (value) {
             this.element.src = value;
+            this.element.play();
         }
     }
 }
