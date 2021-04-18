@@ -3,12 +3,12 @@
 import Component from '../../lib/Component';
 import { isAuthenticated } from '../../lib/authentication';
 import redirect from "../../lib/redirect";
+import playTrack from '../../lib/playTrack';
 
 import data from './Player.json';
 import PlayerImage from './PlayerImage';
 import PlayerAudio from './PlayerAudio';
 import PlayerInfo from './PlayerInfo';
-import Track from './Track';
 
 
 class Player extends Component {
@@ -25,9 +25,12 @@ class Player extends Component {
 
             this.audio = new PlayerAudio(props);
             this.audio.mount(this.element);
+            this.audio.addListener("ended", this.ended, this);
 
             this.info = new PlayerInfo(props);
             this.info.mount(this.element);
+
+
         } else {
             this.addListener("click", this.signup);
         }
@@ -41,17 +44,23 @@ class Player extends Component {
         redirect.signup();
     }
 
-    update(data) {
+
+    ended() {
+        console.log("ended", this);
+    }
+
+
+    play(track) {
         if (isAuthenticated()) {
-            this.image.setImage(data.image);
-            this.audio.song = data.song;
-            this.info.title = data.title;
-            this.info.author = data.author;
+            this.image.setImage(track.image);
+            this.info.title = track.title;
+            this.info.author = track.author;
+            this.audio.song = track.song;
         }
     }
 }
 
-const mountPlayer = (parent, props = new Track()) => {
+const mountPlayer = (parent, props = playTrack()) => {
     const player = new Player(props);
     player.mount(parent);
     return player;
