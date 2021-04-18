@@ -1,12 +1,15 @@
 "use strict";
 
 import Component, {setImageSource, setValue} from '../lib/Component';
+import {isAuthenticated} from '../lib/authentication';
 
-import config from "./Card.json";
+import data from "./Card.json";
 
 class Card extends Component {
     constructor(props) {
         // load structure
+        const config = isAuthenticated() ? data.auth : data.default;
+
         super(config);
 
         // fill data
