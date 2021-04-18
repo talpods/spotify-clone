@@ -9,15 +9,63 @@ class CardCollection extends Component {
     constructor(title) {
         super(data);
         setValue(title, this.element.querySelector(".title"));
+        this.title = title;
 
         this.cards = [];
         this.container = this.element.querySelector(".cards");
     }
 
+    /**
+     * fillCollection() - method for filling entire colection of items.
+     * @param {array} data - data array received from server or created locally
+     * @param {function} propsCB - callback function for filling props
+     */
+    fillCollection(data, propsCB) {
+        // reset old content
+        this.resetCollection();
+
+        // create fragment for optimizing fill
+        const fragment = document.createDocumentFragment();
+
+        for (let item of data) {
+            // create card for current item using props callback
+            let card = new Card(propsCB(item));
+            card.element.dataset.index = this.cards.length;
+
+            // add the card to collection
+            this.cards.push(card);
+
+            // append element to the document fragment
+            fragment.appendChild(card.element);
+        }
+
+        // append fragment to the collection element
+        this.container.append(fragment);
+    }
+
+    /**
+     *
+     * @param {Card} card - card component to be added to collection
+     */
     append(card) {
         card.element.dataset.index = this.cards.length;
         this.container.appendChild(card.element);
         this.cards.push(card);
+    }
+
+    /**
+     * resetCollection() - erase entire collection.
+     * @returns DocumentFragment for filling new items
+     */
+    resetCollection() {
+        // remove listeners
+        this.cards.forEach(item => item.removeListener());
+
+        // reset cards
+        this.cards = [];
+
+        // reset the html child elements
+        this.container.innerHTML = "";
     }
 }
 
