@@ -13,8 +13,8 @@ import Toolbar from './components/Toolbar';
 const mountToolbar = (container) => {
     // Temporary solution until toolbar is finished:
     const element = document.createElement("div")
-    element.className = "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10";
-    element.textContent = "toolbar";
+    element.className = "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10 p-4";
+    element.textContent = "this will be replaced with toolbar";
     container.appendChild(element);
     return element;
 
