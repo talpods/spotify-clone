@@ -12,7 +12,7 @@ class SideLists extends Component {
 
         this.links = [
             new Link({text: "Create Playlist", to: "playlist.html",img: "img/create.png"}),
-            new Link({text: "Liked Songs", to: "liked.html",img: "img/like.png"}),
+            // new Link({text: "Liked Songs", to: "liked.html",img: "img/like.png"}),
         ];
 
         this.links.forEach(crt => crt.mount(this.element));
