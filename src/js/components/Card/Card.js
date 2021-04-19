@@ -40,13 +40,12 @@ class Card extends Component {
             return;
         }
 
+        // augment event data with props and index
         // add card index to the event to identify which card was clicked
-        event.props.cardIndex = event.currentTarget?.dataset?.index;
-        event.props.card = {...this.props};
-    }
-
-    resetPlayState() {
-        this.button.click();
+        event.card = {
+            index: event.currentTarget?.dataset?.index,
+            props: {...this.props}
+        }
     }
 }
 
