@@ -1,6 +1,6 @@
 import { getTracks, getCategories, search, getCategorySlug } from './lib/data';
 
-import Card from './components/Card';
+import Card from './components/Card/Card';
 import CardCollection, {mountCategories, mountTracks} from './components/CardCollection';
 
 // the context will be used later for play / stop events
