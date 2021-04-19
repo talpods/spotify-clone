@@ -1,16 +1,11 @@
 "use strict";
-import Toolbar from './components/Toolbar';
-let toolBarContainer = document.getElementById("toolbar");
+import { mountToolbar } from "../js/components/Toolbar"
 
 
+(() => {
+    mountToolbar(document.querySelector(".toolbar"));
 
-
-
-
-
-
-
-
+})();
 
 
 // conbtains demo api for toolbar

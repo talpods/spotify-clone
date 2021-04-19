@@ -4,6 +4,7 @@ import Component from '../../lib/Component';
 import data from './Sidebar.json';
 import SideMenu from './SideMenu';
 import SideLists from './SideLists';
+import {isAuthenticated} from '../../lib/authentication';
 
 class Sidebar extends Component {
     constructor() {
@@ -12,8 +13,10 @@ class Sidebar extends Component {
         this.menu = new SideMenu();
         this.menu.mount(this.element);
 
-        this.lists = new SideLists();
-        this.lists.mount(this.element);
+        if (isAuthenticated()) {
+            this.lists = new SideLists();
+            this.lists.mount(this.element);
+        }
     }
 }
 

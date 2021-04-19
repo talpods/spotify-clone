@@ -6,7 +6,7 @@ import data from "./PlayerInfo.json";
 class PlayerInfo extends Component {
     constructor(props) {
         super(data);
-        console.log(this.element);
+
         this.titleElement = this.element.querySelector(".title");
         this.authorElement = this.element.querySelector(".author");
 
