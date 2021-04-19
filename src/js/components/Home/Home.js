@@ -5,6 +5,7 @@ import Component from '../../lib/Component';
 import data from './Home.json';
 import {getCategories, getTracks, getCategorySlug} from '../../lib/data';
 import playTrack from '../../lib/playTrack';
+import TrackIterator from '../../lib/TrackIterator';
 
 import CardCollection from '../CardCollection';
 
@@ -24,6 +25,10 @@ class Home extends Component {
         this.append(this.tracks);
 
         this.fetchData();
+
+        this.trackIterator = new TrackIterator();
+
+        this.player.addAudioListener("ended", this.onNextTrack, this);
     }
 
 
@@ -55,10 +60,21 @@ class Home extends Component {
         });
     }
 
-    playCategory({props}) {
+    async playCategory({props}) {
         if(!props) {
             return;
         }
+
+        const result = await getCategorySlug(props.text);
+
+        const tracks = result.tracks.map(crt => playTrack(crt.title, crt.author, crt.image, crt.url));
+
+
+        this.trackIterator = new TrackIterator(tracks);
+        const track = this.trackIterator.next();
+
+        this.player.play(track);
+
     }
 
     playTrack({props}) {
@@ -71,8 +87,22 @@ class Home extends Component {
 
         this.player.play(track);
     }
-}
 
+    onNextTrack(event) {
+        if (!this.trackIterator) {
+            return playTrack();
+        }
+
+        const track = this.trackIterator.next();
+
+        if(track) {
+            this.player.play(track);
+        } else {
+            this.player.play(playTrack())
+        }
+    }
+
+}
 
 const mountHome = (container, player) => {
     const component = new Home(player);
