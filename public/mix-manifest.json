@@ -6,5 +6,6 @@
     "/js/player.js": "/js/player.js",
     "/js/home.js": "/js/home.js",
     "/js/search.js": "/js/search.js",
+    "/js/playlist.js": "/js/playlist.js",
     "/css/app.css": "/css/app.css"
 }
