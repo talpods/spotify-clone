@@ -1,5 +1,5 @@
 
-import mountToolbar from "./components/Toolbar"
+import {mountToolbar} from "./components/Toolbar"
 
 (() => {
     mountToolbar(document.querySelector(".toolbar-container"));

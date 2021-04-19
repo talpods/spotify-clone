@@ -6,7 +6,7 @@
         {
             "comment": "search bar",
             "tagName": "input",
-            "className": " font-sans outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black",
+            "className": "font-sans outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black",
             "attributes": [
                 {
                     "name": "type",
@@ -21,7 +21,7 @@
         {
             "comment": "login button",
             "tagName": "button",
-            "className": " border border-white bg-white text-black px-10 py-2 rounded-full",
+            "className": "border border-white bg-white text-black px-10 py-2 rounded-full",
             "textContext": "login"
         }
     ]
