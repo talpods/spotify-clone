@@ -21,6 +21,11 @@ class PlayerInfo extends Component {
     set author(value) {
         setValue(value, this.authorElement);
     }
+
+    reset() {
+        this.title = "Title";
+        this.author = "Author";
+    }
 }
 
 export default PlayerInfo;

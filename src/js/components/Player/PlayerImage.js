@@ -10,6 +10,10 @@ class PlayerImage extends Component {
     setImage(image) {
         setImageSource(image, this.element);
     }
+
+    reset() {
+        this.setImage("img/song-image.png");
+    }
 }
 
 export default PlayerImage;

@@ -45,7 +45,9 @@ class Player extends Component {
     }
 
     reset() {
+        this.image.reset();
         this.audio.reset();
+        this.info.reset();
     }
 
     addAudioListener(event, callback, bindObj) {
