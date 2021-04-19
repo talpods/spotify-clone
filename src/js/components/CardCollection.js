@@ -59,7 +59,7 @@ class CardCollection extends Component {
      */
     resetCollection() {
         // remove listeners
-        this.cards.forEach(item => item.removeListener());
+        this.cards.forEach(item => item.removeEvents());
 
         // reset cards
         this.cards = [];
