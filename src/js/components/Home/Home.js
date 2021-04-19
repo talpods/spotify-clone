@@ -98,7 +98,7 @@ class Home extends Component {
         if(track) {
             this.player.play(track);
         } else {
-            this.player.play(playTrack())
+            this.player.reset();
         }
     }
 
