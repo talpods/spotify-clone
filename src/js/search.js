@@ -2,7 +2,6 @@
 import { mountSidebar } from "./components/Sidebar/Sidebar";
 import { mountCategories, mountTracks } from './components/CardCollection';
 import { mountPlayer } from './components/Player/Player'
-import { Track } from './components/Player/Track';
 
 //import {mount}
 
