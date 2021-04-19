@@ -24,7 +24,6 @@ const get = async (url, name = "tracks") => {
             return null;
         }
 
-        console.log(response.status);
         const data = await response.json();
         return data [name];
     } catch (error) {
