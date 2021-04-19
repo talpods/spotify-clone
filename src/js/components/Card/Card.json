@@ -1,0 +1,5 @@
+{
+    "comment": "card",
+    "tagName": "div",
+    "className": "card relative p-3 rounded-md h-52 w-44 bg-topbeat-player text-emerald-50 hover-trigger hover:bg-gray-900"
+}

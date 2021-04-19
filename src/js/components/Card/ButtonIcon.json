@@ -1,0 +1,10 @@
+{
+    "comment": "button-icon",
+    "tagName": "img",
+    "attributes": [
+        {
+            "name": "alt",
+            "value": "button state icon"
+        }
+    ]
+}

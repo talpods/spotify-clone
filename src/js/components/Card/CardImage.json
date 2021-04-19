@@ -1,0 +1,11 @@
+{
+    "comment": "card-image",
+    "tagName": "img",
+    "className": "image block w-40 h-40",
+    "attributes": [
+        {
+            "name": "alt",
+            "value": "image"
+        }
+    ]
+}

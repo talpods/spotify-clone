@@ -1,0 +1,22 @@
+{
+    "comment": "icon-container",
+    "tagName": "div",
+    "className": "absolute rounded-full bg-topbeat-player top-4 left-4",
+    "children": [
+        {
+            "comment": "icon",
+            "tagName": "img",
+            "className": "w-4 h-4",
+            "attributes": [
+                {
+                    "name": "src",
+                    "value": "img/favicon.png"
+                },
+                {
+                    "name": "alt",
+                    "value": "card icon"
+                }
+            ]
+        }
+    ]
+}

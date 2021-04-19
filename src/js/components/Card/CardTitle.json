@@ -1,0 +1,5 @@
+{
+    "comment": "card-title",
+    "tagName": "h2",
+    "className": "title absolute left-0 right-0 font-bold text-center top-8 text-emerald-50"
+}

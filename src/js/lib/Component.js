@@ -58,6 +58,7 @@ class Component {
         this.element = elementFactory(data);
         this.parent = null;
         this.props = props;
+        this.listeners = [];
     }
 
 
@@ -118,6 +119,9 @@ class Component {
         // more details in https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
         const handler = bindObj ? callback.bind(bindObj) : callback;
         this.element.addEventListener(event, handler);
+
+        this.listeners.push({event, handler});
+
         return handler;
     }
 
@@ -128,6 +132,10 @@ class Component {
      */
     removeListener(event, callback) {
         this.element.removeEventListener(event, callback);
+    }
+
+    removeEvents() {
+        this.listeners.forEach(item => this.element.removeEventListener(item.event, item.handler));
     }
 }
 
