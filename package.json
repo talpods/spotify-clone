@@ -4,7 +4,8 @@
   "description": "This repository contains sources for first team project:\r Creating a spotify clone.",
   "main": "index.js",
   "scripts": {
-    "dev": "npx mix watch "
+    "dev": "npx mix watch ",
+    "start": "vite serve public"
   },
   "repository": {
     "type": "git",
