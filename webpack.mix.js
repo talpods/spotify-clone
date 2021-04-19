@@ -8,6 +8,7 @@ mix.js('src/js/app.js', 'js')
     .js('src/js/player.js', 'js')
     .js('src/js/home.js', 'js')
     .js('src/js/search.js', 'js')
+    .js('src/js/playlist.js', 'js')
     .postCss("src/css/app.css", "css", [
         require("tailwindcss"),
     ])
