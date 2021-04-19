@@ -10,6 +10,8 @@ import PlayerImage from './PlayerImage';
 import PlayerAudio from './PlayerAudio';
 import PlayerInfo from './PlayerInfo';
 
+import TrackIterator from '../../lib/TrackIterator';
+
 
 class Player extends Component {
     constructor(props) {
@@ -25,7 +27,7 @@ class Player extends Component {
 
             this.audio = new PlayerAudio(props);
             this.audio.mount(this.element);
-            this.audio.addListener("ended", this.reset, this);
+            this.audio.addListener("ended", this.nextTrack, this);
 
             this.info = new PlayerInfo(props);
             this.info.mount(this.element);
@@ -50,6 +52,22 @@ class Player extends Component {
         this.info.reset();
     }
 
+    nextTrack() {
+        if(!this.trackIterator) {
+            this.reset();
+            return;
+        }
+
+        const track = this.trackIterator.next();
+
+        if(track) {
+            this.setTrack(track);
+        } else {
+            this.reset();
+            //this.trackIterator = null;
+        }
+    }
+
     addAudioListener(event, callback, bindObj) {
         if(!isAuthenticated()) {
             return;
@@ -59,13 +77,20 @@ class Player extends Component {
     }
 
 
-    play(track) {
-        if (isAuthenticated()) {
-            this.image.setImage(track.image);
-            this.info.title = track.title;
-            this.info.author = track.author;
-            this.audio.song = track.song;
+    play(tracks) {
+        if(!isAuthenticated()) {
+            return;
         }
+
+        this.trackIterator = new TrackIterator(tracks);
+        this.nextTrack();
+    }
+
+    setTrack(track) {
+        this.image.setImage(track.image);
+        this.info.title = track.title;
+        this.info.author = track.author;
+        this.audio.song = track.song;
     }
 }
 

@@ -5,7 +5,6 @@ import Component from '../../lib/Component';
 import data from './Home.json';
 import {getCategories, getTracks, getCategorySlug} from '../../lib/data';
 import playTrack from '../../lib/playTrack';
-import TrackIterator from '../../lib/TrackIterator';
 
 import CardCollection from '../CardCollection';
 
@@ -26,9 +25,7 @@ class Home extends Component {
 
         this.fetchData();
 
-        this.trackIterator = new TrackIterator();
 
-        this.player.addAudioListener("ended", this.onNextTrack, this);
     }
 
 
@@ -72,12 +69,7 @@ class Home extends Component {
 
         const tracks = result.tracks.map(crt => playTrack(crt.title, crt.author, crt.image, crt.url));
 
-
-        this.trackIterator = new TrackIterator(tracks);
-        const track = this.trackIterator.next();
-
-        this.player.play(track);
-
+        this.player.play(tracks);
     }
 
     playTrack({card}) {
@@ -91,21 +83,7 @@ class Home extends Component {
         const track = playTrack(props.title, props.text,
             props.image,props.url);
 
-        this.player.play(track);
-    }
-
-    onNextTrack(event) {
-        if (!this.trackIterator) {
-            return playTrack();
-        }
-
-        const track = this.trackIterator.next();
-
-        if(track) {
-            this.player.play(track);
-        } else {
-            this.player.reset();
-        }
+        this.player.play([track]);
     }
 
 }
