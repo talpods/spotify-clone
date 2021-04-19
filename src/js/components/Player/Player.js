@@ -25,7 +25,7 @@ class Player extends Component {
 
             this.audio = new PlayerAudio(props);
             this.audio.mount(this.element);
-            this.audio.addListener("ended", this.ended, this);
+            this.audio.addListener("ended", this.reset, this);
 
             this.info = new PlayerInfo(props);
             this.info.mount(this.element);
@@ -44,9 +44,16 @@ class Player extends Component {
         redirect.signup();
     }
 
+    reset() {
+        this.audio.reset();
+    }
 
-    ended() {
-        console.log("ended", this);
+    addAudioListener(event, callback, bindObj) {
+        if(!isAuthenticated()) {
+            return;
+        }
+
+        return this.audio.addListener(event, callback, bindObj);
     }
 
 
