@@ -13,37 +13,28 @@
 
 
 
-<body class="  	 bg-black">
-    <!-- the navbar -->
-    <!-- this is just a template for referance ,to see it remove <template></template> -->
-    <!-- <template> -->
-    <div class="toolbar"></div>
+<body class=" bg-black">
 
-    <div class="  text-white flex  bg-topbeat-toolbar h-14  ">
-        <!-- the search bar -->
-
-
-        <input class="font-sans outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black" type="text"
-            placeholder="Artist,songs,Or Catgories">
-
-        <a target="_blank" href="login.html" class="login mt-3 ml-auto mr-2">
-            <button class="border- border-white bg-white text-black px-10 py-2 rounded-full">login</button>
-        </a>
-
-    </div>
+    <!-- this is where the tool bar should be injected -->
+    <div class="toolbar-container"></div>
+    <!-- this is the template for the tool bar -->
+    <template>
+        <div class="toolbar  text-white flex w-screen bg-topbeat-toolbar h-14  ">
 
 
-    </div>
+
+            <input class="font-sans outline-none px-32 py-1  mt-3 ml-auto rounded-full bg-white  text-black" type="text"
+                placeholder="Artist,songs,Or Catgories">
+
+            <a target="_blank" href="login.html" class="login mt-3 ml-auto mr-2">
+                <button class="border- border-white bg-white text-black px-10 py-2 rounded-full">login</button>
+            </a>
+
+        </div>
+
     </template>
 
-
-
-
-
-
-
-
-    <script src="js/toolbar.js"> </script>
+    <script src="js/toolbar.js"></script>
 </body>
 
 </html>

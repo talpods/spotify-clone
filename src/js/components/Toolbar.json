@@ -1,17 +1,28 @@
 {
     "comment": "toolbar",
     "tagName": "div",
-    "className": " text-white flex  bg-topbeat-toolbar h-14 ",
+    "className": "toolbar  text-white flex w-screen bg-topbeat-toolbar h-14 ",
     "children": [
         {
             "comment": "search bar",
             "tagName": "input",
-            "className": " font-sans outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black"
+            "className": " font-sans outline-none px-32 py-1 ml-80 mt-3 rounded-full bg-white  text-black",
+            "attributes": [
+                {
+                    "name": "type",
+                    "value": "text"
+                },
+                {
+                    "name": "placeholder",
+                    "value": "Artist,songs,Or Catgories"
+                }
+            ]
         },
         {
-            "comment": " login ",
-            "tagName": " div",
-            "className": "a border- border-white bg-white text-black px-10 py-2 rounded-full"
+            "comment": "login button",
+            "tagName": "button",
+            "className": " border border-white bg-white text-black px-10 py-2 rounded-full",
+            "textContext": "login"
         }
     ]
 }
