@@ -3,12 +3,11 @@
 import {mountHome} from './components/Home/Home';
 import {mountSidebar} from "./components/Sidebar/Sidebar";
 import {mountPlayer} from './components/Player/Player'
-
-
-//import {mountToolbar} from './components/Toolbar';
+import {mountToolbar} from './components/Toolbar';
 
 import Toolbar from './components/Toolbar';
 
+/*
 
 const mountToolbar = (container) => {
     // Temporary solution until toolbar is finished:
@@ -23,10 +22,10 @@ const mountToolbar = (container) => {
     const component = new Toolbar();
     component.mount(container);
     return component;
-    */
+
 };
 
-
+*/
 
 
 const context = {};
