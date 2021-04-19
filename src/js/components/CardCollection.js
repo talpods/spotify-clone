@@ -87,7 +87,7 @@ const mountCategories = async (container) => {
 
     cards.mount(container);
 
-    return categories;
+    return cards;
 };
 
 const mountTracks = async (container) => {
@@ -106,7 +106,7 @@ const mountTracks = async (container) => {
 
     cards.mount(container);
 
-    return tracks;
+    return cards;
 };
 
 
