@@ -1,6 +1,6 @@
 "use strict";
 
-const playTrack = (title, author, image, song) => {
+const playTrack = (title, author, image, song = "") => {
     return {
         title: title || "Title",
         author: author || "Author",
