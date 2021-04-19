@@ -3,7 +3,7 @@ import { getTracks, getCategories, search, getCategorySlug } from '../lib/data';
 
 import Component, {setValue} from '../lib/Component';
 import data from './CardCollection.json';
-import Card from "./Card";
+import Card from './Card/Card';
 
 class CardCollection extends Component {
     constructor(title) {
