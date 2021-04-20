@@ -1,6 +1,6 @@
 {
     "comment": "landing tool bar container",
-    "tagName": "div ",
+    "tagName": "div",
     "className": " toolbarLanding flex justify-end text-2xl rounded fixed left-0 top-0 right-0 text-white  bg-topbeat-toolbar h-20",
     "children": [
         {
@@ -57,7 +57,7 @@
         },
         {
             "comment": "login container ",
-            "tagName": " div",
+            "tagName": "div",
             "className": "loginContainer",
             "children": [
                 {
