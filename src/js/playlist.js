@@ -3,30 +3,8 @@
 
 import {mountSidebar} from "./components/Sidebar/Sidebar";
 import {mountPlayer} from './components/Player/Player'
-
-
-//import {mountToolbar} from './components/Toolbar';
-
-import Toolbar from './components/Toolbar';
-
-
-const mountToolbar = (container) => {
-    // Temporary solution until toolbar is finished:
-    const element = document.createElement("div")
-    element.className = "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10 p-4";
-    element.textContent = "this will be replaced with toolbar";
-    container.appendChild(element);
-    return element;
-
-    // "fixed left-0 top-0 right-0 ml-44 h-14 bg-topbeat-player z-10"
-    /*
-    const component = new Toolbar();
-    component.mount(container);
-    return component;
-    */
-};
-
-
+import {mountToolbar} from './components/Toolbar';
+import {mountPlaylist} from './components/Playlist/Playlist';
 
 
 const context = {};
@@ -34,8 +12,8 @@ const context = {};
 const container = document.querySelector(".playlist");
 
 (async () => {
-    context.sidebar = mountSidebar(container);
+    context.sidebar = mountSidebar(container, "Library");
     context.toolbar = mountToolbar(container);
     context.palyer = mountPlayer(container);
-
+    context.mountPlaylist = mountPlaylist(container, context.player);
 })();
