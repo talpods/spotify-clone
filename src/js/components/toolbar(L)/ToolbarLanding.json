@@ -6,7 +6,7 @@
         {
             "comment": "logo pic",
             "tagName": "div",
-            "className": "mr-auto ml-96",
+            "className": " logoimage mr-auto ml-96",
             "children": [
                 {
                     "comment": "logo",
@@ -28,11 +28,12 @@
         {
             "comment": "sign up conttainer ",
             "tagName": "div",
+            "className": "signupContainer",
             "children": [
                 {
                     "comment": "signup link",
                     "tagName": "a",
-                    "className": "",
+                    "className": "signuplink",
                     "attributes": [
                         {
                             "name": "herf",
@@ -48,7 +49,7 @@
                             "comment": "btn for sign up",
                             "tagName": "button",
                             "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
-                            "texContent": "Sign Up"
+                            "textContent": "Sign Up"
                         }
                     ]
                 }
@@ -57,11 +58,12 @@
         {
             "comment": "login container ",
             "tagName": " div",
+            "className": "loginContainer",
             "children": [
                 {
                     "comment": "login link",
                     "tagName": "a",
-                    "className": "",
+                    "className": "loginlink font-sans ",
                     "attributes": [
                         {
                             "name": "herf",
@@ -77,7 +79,7 @@
                             "comment": "btn for sign up",
                             "tagName": "button",
                             "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
-                            "texContent": "Login"
+                            "textContent": "Login"
                         }
                     ]
                 }
