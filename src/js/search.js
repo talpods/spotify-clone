@@ -7,16 +7,16 @@ import { mountSearch } from "../../src/js/components/search/search"
 
 const context = {};
 
-const container = document.querySelector(".home");
+const container = document.querySelector(".search");
 
 (async () => {
 
-    context.tracks = mountTracks(container);
-    context.sidebar = mountSidebar(container);
+    // context.tracks = mountTracks(container);
+    context.sidebar = mountSidebar(container, "Search");
     context.palyer = mountPlayer(container);
     context.toolbar = mountToolbar(container);
 
-    context.search = mountSearch(container, context.palyer);
+    // context.search = mountSearch(container, context.palyer, context.toolbar);
 
 })();
 

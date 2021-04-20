@@ -10,24 +10,47 @@ import CardCollection from '../CardCollection';
 
 
 class Search extends Component {
-    constructor(player) {
+    constructor(player, toolbar) {
+        super({});
 
         this.player = player;
+        this.toolbar = toolbar;
+        this.toolbar.subscribeSearch(this.update.bind(this));
 
-        this.categories = new CardCollection("Categories");
-        this.categories.addListener("click", this.playCategory, this);
-        this.append(this.categories);
+        this.search = new CardCollection("Search");
+        this.search.addListener("click", this.playCard, this);
 
-        this.tracks = new CardCollection("Tracks");
-        this.tracks.addListener("click", this.playTrack, this);
-        this.append(this.tracks);
+        // this.categories = new CardCollection("Categories");
+        // this.categories.addListener("click", this.playCategory, this);
+        // this.append(this.categories);
 
-        this.fetchData();
+        // this.tracks = new CardCollection("Tracks");
+        // this.tracks.addListener("click", this.playTrack, this);
+        // this.append(this.tracks);
+
+        // this.fetchData();
 
 
     }
 
+    update(searchResult) {
+        console.log("update");
 
+        this.search.fillCollection(searchResult, item => {
+            return {
+                title: item.title,
+                text: item.author,
+                image: item.image,
+                duration: item.duration,
+                url: item.url,
+                slug: item.category.slug,
+            };
+        });
+    }
+
+    playCard() {
+        console.log("play card");
+    }
     /**
      * method for fetching data
      */
@@ -46,23 +69,23 @@ class Search extends Component {
     }
 
 
-    playTrack({ card }) {
-        if (!card) {
-            return;
-        }
+    // playTrack({ card }) {
+    //     if (!card) {
+    //         return;
+    //     }
 
-        // get props for the card
-        const { props } = card;
+    //     // get props for the card
+    //     const { props } = card;
 
-        const track = playTrack(props.title, props.text,
-            props.image, props.url);
+    //     const track = playTrack(props.title, props.text,
+    //         props.image, props.url);
 
-        this.player.play([track]);
-    }
+    //     this.player.play([track]);
+    // }
 
 }
-const mountSearch = (container, player) => {
-    const component = new Search(player);
+const mountSearch = (container, player, toolbar) => {
+    const component = new Search(player, toolbar);
     component.mount(container);
     return component;
 };
