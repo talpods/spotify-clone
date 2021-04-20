@@ -3,7 +3,7 @@
 import Component from '../../lib/Component';
 
 import data from './Home.json';
-import {getCategories, getTracks, getCategorySlug} from '../../lib/data';
+import { getCategories, getTracks, getCategorySlug } from '../../lib/data';
 import playTrack from '../../lib/playTrack';
 
 import CardCollection from '../CardCollection';
@@ -19,7 +19,7 @@ class Home extends Component {
         this.categories.addListener("click", this.playCategory, this);
         this.append(this.categories);
 
-        this.tracks =  new CardCollection("Tracks");
+        this.tracks = new CardCollection("Tracks");
         this.tracks.addListener("click", this.playTrack, this);
         this.append(this.tracks);
 
@@ -57,13 +57,13 @@ class Home extends Component {
         });
     }
 
-    async playCategory({card}) {
-        if(!card) {
+    async playCategory({ card }) {
+        if (!card) {
             return;
         }
 
         // get props for the card
-        const {props} = card;
+        const { props } = card;
 
         const result = await getCategorySlug(props.text);
 
@@ -72,16 +72,16 @@ class Home extends Component {
         this.player.play(tracks);
     }
 
-    playTrack({card}) {
-        if(!card) {
+    playTrack({ card }) {
+        if (!card) {
             return;
         }
 
         // get props for the card
-        const {props} = card;
+        const { props } = card;
 
         const track = playTrack(props.title, props.text,
-            props.image,props.url);
+            props.image, props.url);
 
         this.player.play([track]);
     }

@@ -1,7 +1,7 @@
 {
     "comment": "toolbar",
     "tagName": "div",
-    "className": "toolbar  text-white flex w-screen bg-topbeat-toolbar h-14 ",
+    "className": "toolbar fixed left-0 top-0 right-0 ml-44 z-10 text-white flex bg-topbeat-toolbar h-14 ",
     "children": [
         {
             "comment": "search bar",
