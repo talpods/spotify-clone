@@ -10,14 +10,16 @@ class Toolbar extends Component {
         search.addEventListener("keyup", this.onSearch.bind(this));
     }
 
+    async fillAll() {
+        return await search("");
+    }
+
     async onSearch({ target }) {
         const result = await search(target.value);
 
         if (this.updateCallback) {
-            this.updateCallback(result)
+            this.updateCallback(result);
         }
-
-        // console.log(result);
     }
 
     subscribeSearch(callback) {
