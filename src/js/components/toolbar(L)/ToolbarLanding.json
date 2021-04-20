@@ -1,0 +1,87 @@
+{
+    "comment": "landing tool bar container",
+    "tagName": "div ",
+    "className": " toolbarLanding flex justify-end text-2xl rounded fixed left-0 top-0 right-0 text-white  bg-topbeat-toolbar h-20",
+    "children": [
+        {
+            "comment": "logo pic",
+            "tagName": "div",
+            "className": "mr-auto ml-96",
+            "children": [
+                {
+                    "comment": "logo",
+                    "tagName": "img",
+                    "className": "",
+                    "attributes": [
+                        {
+                            "name": "src",
+                            "value": "img/logo.png"
+                        },
+                        {
+                            "name": "alt",
+                            "value": "Topbeat logo"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "comment": "sign up conttainer ",
+            "tagName": "div",
+            "children": [
+                {
+                    "comment": "signup link",
+                    "tagName": "a",
+                    "className": "",
+                    "attributes": [
+                        {
+                            "name": "herf",
+                            "value": " signup.html"
+                        },
+                        {
+                            "name": "taget",
+                            "value": "_self"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "comment": "btn for sign up",
+                            "tagName": "button",
+                            "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
+                            "texContent": "Sign Up"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "comment": "login container ",
+            "tagName": " div",
+            "children": [
+                {
+                    "comment": "login link",
+                    "tagName": "a",
+                    "className": "",
+                    "attributes": [
+                        {
+                            "name": "herf",
+                            "value": " login.html"
+                        },
+                        {
+                            "name": "taget",
+                            "value": "_self"
+                        }
+                    ],
+                    "children": [
+                        {
+                            "comment": "btn for sign up",
+                            "tagName": "button",
+                            "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
+                            "texContent": "Login"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
