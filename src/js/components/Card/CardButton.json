@@ -1,5 +1,5 @@
 {
     "comment": "card-btn",
     "tagName": "button",
-    "className": "play-btn absolute rounded-full right-4 bottom-10 hover-target focus:outline-none play-btn"
+    "className": "play-btn absolute rounded-full hover-target focus:outline-none play-btn"
 }

@@ -7,7 +7,10 @@ import { getCategories, getTracks, getCategorySlug } from '../../lib/data';
 import playTrack from '../../lib/playTrack';
 
 import CardCollection from '../CardCollection';
-import Card from '../Card/Card';
+
+import {buttonTypes} from "../Card/buttonFactory";
+
+const buttons = [buttonTypes.play];
 
 import data from './Search.json';
 
@@ -41,9 +44,9 @@ class Search extends Component {
                 duration: item.duration,
                 url: item.url,
                 slug: item.category.slug,
+                buttons
             };
-        },
-        this.getFactory());
+        });
     }
 
     playCard({card}) {
@@ -51,11 +54,11 @@ class Search extends Component {
             return;
         }
 
-        if (card.action !== "play") {
-            return;
-        }
+        // if (card.action !== "play") {
+        //     return;
+        // }
 
-        console.log("play");
+        // console.log("play");
 
         // get props for the card
         const { props } = card;
@@ -64,10 +67,6 @@ class Search extends Component {
             props.image, props.url);
 
         this.player.play([track]);
-    }
-
-    getFactory() {
-        return (item, cb) => new Card(cb(item));
     }
 }
 

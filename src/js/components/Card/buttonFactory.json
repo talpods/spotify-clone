@@ -1,0 +1,20 @@
+{
+    "play": {
+        "image": "img/buttonplay.png",
+        "className": "state1",
+        "action": "play",
+        "position": ["right-4", "bottom-10"]
+    },
+    "add": {
+        "image": "img/add.png",
+        "className": "state1",
+        "action": "add",
+        "position": ["right-14", "bottom-10"]
+    },
+    "delete": {
+        "image": "img/delete.png",
+        "className": "state1",
+        "action": "delete",
+        "position": ["right-14", "bottom-10"]
+    }
+}

@@ -7,7 +7,9 @@ import { getCategories, getTracks, getCategorySlug } from '../../lib/data';
 import playTrack from '../../lib/playTrack';
 
 import CardCollection from '../CardCollection';
+import {buttonTypes} from "../Card/buttonFactory";
 
+const buttons = [buttonTypes.play];
 
 class Home extends Component {
     constructor(player) {
@@ -40,7 +42,8 @@ class Home extends Component {
                 title: item.title,
                 text: item.slug,
                 image: item.image,
-                slug: item.slug
+                slug: item.slug,
+                buttons
             };
         });
 
@@ -53,6 +56,7 @@ class Home extends Component {
                 duration: item.duration,
                 url: item.url,
                 slug: item.category.slug,
+                buttons
             };
         });
     }

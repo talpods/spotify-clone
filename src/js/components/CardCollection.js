@@ -6,8 +6,6 @@ import data from './CardCollection.json';
 import Card from './Card/Card';
 
 
-const defaultFactory = (item, cb) => new Card(cb(item));
-
 class CardCollection extends Component {
     constructor(title) {
         super(data);
@@ -23,7 +21,7 @@ class CardCollection extends Component {
      * @param {array} data - data array received from server or created locally
      * @param {function} propsCB - callback function for filling props
      */
-    fillCollection(data, propsCB, cardFactory = defaultFactory) {
+    fillCollection(data, propsCB) {
         // reset old content
         this.resetCollection();
 
@@ -32,7 +30,7 @@ class CardCollection extends Component {
 
         for (let item of data) {
             // create card for current item using props callback
-            let card = cardFactory(item, propsCB);
+            let card = new Card(propsCB(item));
             card.element.dataset.index = this.cards.length;
 
             // add the card to collection
@@ -50,10 +48,17 @@ class CardCollection extends Component {
      *
      * @param {Card} card - card component to be added to collection
      */
-    append(card) {
+    addCard(card) {
         card.element.dataset.index = this.cards.length;
         this.container.appendChild(card.element);
         this.cards.push(card);
+    }
+
+
+    deleteCard(cardIndex) {
+        const [card] = this.cards.splice(cardIndex, 1);
+        card.removeEvents();
+        this.container.removeChild(card.element);
     }
 
     /**
@@ -85,7 +90,7 @@ const mountCategories = async (container) => {
             image: category.image
         };
 
-        cards.append(new Card(props));
+        cards.addCard(new Card(props));
     }
 
     cards.mount(container);
@@ -104,7 +109,7 @@ const mountTracks = async (container) => {
             image: track.image
         }
 
-        cards.append(new Card(props));
+        cards.addCard(new Card(props));
     }
 
     cards.mount(container);

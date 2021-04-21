@@ -12,8 +12,8 @@
     "/css/app.css": "/css/app.css",
     "/dev/css/app.css": "/dev/css/app.css",
     "/dev/css/app.css.map": "/dev/css/app.css.map",
+    "/dev/img/add.png": "/dev/img/add.png",
     "/dev/img/apply.png": "/dev/img/apply.png",
-    "/dev/img/apply.svg": "/dev/img/apply.svg",
     "/dev/img/bubble1.png": "/dev/img/bubble1.png",
     "/dev/img/bubble2.png": "/dev/img/bubble2.png",
     "/dev/img/buttonpause.png": "/dev/img/buttonpause.png",
@@ -21,7 +21,6 @@
     "/dev/img/buttonplay.svg": "/dev/img/buttonplay.svg",
     "/dev/img/create.png": "/dev/img/create.png",
     "/dev/img/edit.png": "/dev/img/edit.png",
-    "/dev/img/edit.svg": "/dev/img/edit.svg",
     "/dev/img/favicon.png": "/dev/img/favicon.png",
     "/dev/img/home.png": "/dev/img/home.png",
     "/dev/img/left-button.png": "/dev/img/left-button.png",
@@ -35,5 +34,5 @@
     "/dev/img/search.png": "/dev/img/search.png",
     "/dev/img/signup.png": "/dev/img/signup.png",
     "/dev/img/song-image.png": "/dev/img/song-image.png",
-    "/dev/img/add.png": "/dev/img/add.png"
+    "/dev/img/delete.png": "/dev/img/delete.png"
 }
