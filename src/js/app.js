@@ -7,7 +7,7 @@ import {getTracks, getCategories, search, getCategorySlug} from './lib/data';
     const categories = await getCategories();
     console.log(categories);
 
-    const result = await search("manele");
+    const result = await search("not-existing");
     console.log(result);
 
     const slug = await getCategorySlug("hip-hop");
