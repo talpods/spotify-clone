@@ -5,6 +5,9 @@ import Component, {setValue} from '../lib/Component';
 import data from './CardCollection.json';
 import Card from './Card/Card';
 
+
+const defaultFactory = (item, cb) => new Card(cb(item));
+
 class CardCollection extends Component {
     constructor(title) {
         super(data);
@@ -20,7 +23,7 @@ class CardCollection extends Component {
      * @param {array} data - data array received from server or created locally
      * @param {function} propsCB - callback function for filling props
      */
-    fillCollection(data, propsCB) {
+    fillCollection(data, propsCB, cardFactory = defaultFactory) {
         // reset old content
         this.resetCollection();
 
@@ -29,7 +32,7 @@ class CardCollection extends Component {
 
         for (let item of data) {
             // create card for current item using props callback
-            let card = new Card(propsCB(item));
+            let card = cardFactory(item, propsCB);
             card.element.dataset.index = this.cards.length;
 
             // add the card to collection

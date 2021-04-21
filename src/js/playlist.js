@@ -15,5 +15,5 @@ const container = document.querySelector(".playlist");
     context.sidebar = mountSidebar(container, "Library");
     context.toolbar = mountToolbar(container);
     context.palyer = mountPlayer(container);
-    context.mountPlaylist = mountPlaylist(container, context.player);
+    context.mountPlaylist = mountPlaylist(container, context.player, context.toolbar);
 })();

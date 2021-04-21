@@ -7,12 +7,13 @@ import { getCategories, getTracks, getCategorySlug } from '../../lib/data';
 import playTrack from '../../lib/playTrack';
 
 import CardCollection from '../CardCollection';
+import Card from '../Card/Card';
 
 import data from './Search.json';
 
 class Search extends Component {
-    constructor(player, toolbar) {
-        super(data);
+    constructor(player, toolbar, json = data) {
+        super(json);
 
         this.player = player;
         this.toolbar = toolbar;
@@ -41,13 +42,20 @@ class Search extends Component {
                 url: item.url,
                 slug: item.category.slug,
             };
-        });
+        },
+        this.getFactory());
     }
 
     playCard({card}) {
         if (!card) {
             return;
         }
+
+        if (card.action !== "play") {
+            return;
+        }
+
+        console.log("play");
 
         // get props for the card
         const { props } = card;
@@ -56,6 +64,10 @@ class Search extends Component {
             props.image, props.url);
 
         this.player.play([track]);
+    }
+
+    getFactory() {
+        return (item, cb) => new Card(cb(item));
     }
 }
 
