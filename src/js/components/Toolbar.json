@@ -1,12 +1,12 @@
 {
     "comment": "toolbar",
     "tagName": "div",
-    "className": "toolbar fixed left-0 top-0 right-0 ml-44 z-10 text-white flex bg-topbeat-toolbar h-14 ",
+    "className": "toolbar fixed left-0 top-0 right-0 ml-44 z-10 text-white flex  items-center bg-topbeat-toolbar h-14 ",
     "children": [
         {
             "comment": "search bar",
             "tagName": "input",
-            "className": "searchbox font-sans outline-none px-32 py-1 ml-96 mt-3 rounded-full bg-white  text-black",
+            "className": "searchbox font-sans outline-none px-32 align-vertical ml-96  py-1 rounded-full bg-white  text-black",
             "attributes": [
                 {
                     "name": "type",
@@ -21,7 +21,7 @@
         {
             "comment": "login button",
             "tagName": "button",
-            "className": "border border-white bg-white text-black ml-auto px-10 py-2 rounded-full",
+            "className": "border border-white bg-white text-center text-black ml-auto px-10 py-1 rounded-full",
             "textContent": "login"
         }
     ]

@@ -1,12 +1,12 @@
 {
     "comment": "landing tool bar container",
     "tagName": "div",
-    "className": " toolbarLanding flex justify-end text-2xl rounded fixed left-0 top-0 right-0 text-white  bg-topbeat-toolbar h-20",
+    "className": " toolbarLanding flex justify-end text-2xl rounded fixed left-0 top-0 right-0 text-white align-vertical bg-topbeat-toolbar h-20",
     "children": [
         {
             "comment": "logo pic",
             "tagName": "div",
-            "className": " logoimage mr-auto ml-96",
+            "className": "logoimage mr-auto",
             "children": [
                 {
                     "comment": "logo",
@@ -28,7 +28,7 @@
         {
             "comment": "sign up conttainer ",
             "tagName": "div",
-            "className": "signupContainer",
+            "className": "signupContainer align-vertical",
             "children": [
                 {
                     "comment": "signup link",
@@ -37,7 +37,7 @@
                     "attributes": [
                         {
                             "name": "herf",
-                            "value": " signup.html"
+                            "value": "signup.html"
                         },
                         {
                             "name": "taget",
@@ -48,7 +48,7 @@
                         {
                             "comment": "btn for sign up",
                             "tagName": "button",
-                            "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
+                            "className": "mt-6 border border-white bg-black focus:outline-none text-white px-8 mr-8 py-1 text-base  rounded-full",
                             "textContent": "Sign Up"
                         }
                     ]
@@ -67,7 +67,7 @@
                     "attributes": [
                         {
                             "name": "herf",
-                            "value": " login.html"
+                            "value": "login.html"
                         },
                         {
                             "name": "taget",
@@ -78,7 +78,7 @@
                         {
                             "comment": "btn for sign up",
                             "tagName": "button",
-                            "className": "mt-6 border border-white focus:outline-none text-white px-10 py-1 rounded-full",
+                            "className": "mt-6 border border-white bg-black focus:outline-none text-base  text-white px-8 py-1 rounded-full",
                             "textContent": "Login"
                         }
                     ]
