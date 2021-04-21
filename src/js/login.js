@@ -1,4 +1,4 @@
-"use strict";
+
 
 import { login, signup } from "./lib/authentication";
 import { locations } from "./lib/redirect";
@@ -13,6 +13,6 @@ document.querySelector("#login")
 
 document.querySelector("#signup")
     .addEventListener("click", () => {
-        signup();
+        login();
         form.setAttribute("action", locations.signup);
     });
