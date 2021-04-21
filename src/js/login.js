@@ -11,4 +11,8 @@ document.querySelector("#login")
         form.setAttribute("action", locations.home);
 });
 
-// TODO singup
+document.querySelector("#signup")
+    .addEventListener("click", () => {
+        login();
+        form.setAttribute("action", locations.signup);
+});
