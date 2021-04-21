@@ -36,12 +36,7 @@ class Card extends Component {
             return;
         }
 
-        // augment event data with props and index
-        // add card index to the event to identify which card was clicked
-        event.card = {
-            index: event.currentTarget?.dataset?.index,
-            props: {...this.props},
-        }
+        event.props = {...this.props};
     }
 }
 

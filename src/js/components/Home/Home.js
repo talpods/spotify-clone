@@ -61,13 +61,10 @@ class Home extends Component {
         });
     }
 
-    async playCategory({ card }) {
-        if (!card) {
+    async playCategory({ props }) {
+        if (!props) {
             return;
         }
-
-        // get props for the card
-        const { props } = card;
 
         const result = await getCategorySlug(props.text);
 
@@ -76,13 +73,10 @@ class Home extends Component {
         this.player.play(tracks);
     }
 
-    playTrack({ card }) {
-        if (!card) {
+    playTrack({ props }) {
+        if (!props) {
             return;
         }
-
-        // get props for the card
-        const { props } = card;
 
         const track = playTrack(props.title, props.text,
             props.image, props.url);

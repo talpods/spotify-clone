@@ -49,19 +49,10 @@ class Search extends Component {
         });
     }
 
-    playCard({card}) {
-        if (!card) {
+    playCard({props}) {
+        if (!props) {
             return;
         }
-
-        // if (card.action !== "play") {
-        //     return;
-        // }
-
-        // console.log("play");
-
-        // get props for the card
-        const { props } = card;
 
         const track = playTrack(props.title, props.text,
             props.image, props.url);

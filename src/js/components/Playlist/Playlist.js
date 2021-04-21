@@ -1,12 +1,9 @@
+"use strict";
+
 import Component from '../../lib/Component';
-
 import data from './Playlist.json';
-import { getCategories, getTracks, getCategorySlug } from '../../lib/data';
 import playTrack from '../../lib/playTrack';
-
 import CardCollection from '../CardCollection';
-import Card from '../Card/Card';
-
 import {buttonTypes} from "../Card/buttonFactory";
 
 const searchButtons = [buttonTypes.play, buttonTypes.add];
@@ -55,46 +52,43 @@ class Playlist extends Component {
         this.search.fillCollection(searchResult, itemCB);
     }
 
-    play(card) {
-        const { props } = card;
-
+    play(props) {
         const track = playTrack(props.title, props.text,
             props.image, props.url);
 
         this.player.play([track]);
     }
 
-    add(card) {
-        const {props} = card;
+    add(props) {
         props.buttons = listButtons;
-        this.list.addCard(new Card(props));
+        this.list.addCard(props);
     }
 
-    delete (card) {
-        this.list.deleteCard(card.index);
+    delete (props) {
+        this.list.deleteCard(props);
     }
 
-    searchAction({action, card}) {
+    searchAction({action, props}) {
         if (!action) {
             return;
         }
 
         if (action === "play") {
-            this.play(card);
+            this.play(props);
         } else if(action == "add") {
-            this.add(card);
+            this.add(props);
         }
     }
 
-    listAction({action, card}) {
+    listAction({action, props}) {
         if (!action) {
             return;
         }
 
         if (action === "play") {
-            this.play(card);
+            this.play(props);
         } else {
-            this.delete(card);
+            this.delete(props);
         }
     }
 }

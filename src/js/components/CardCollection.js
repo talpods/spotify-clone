@@ -48,15 +48,25 @@ class CardCollection extends Component {
      *
      * @param {Card} card - card component to be added to collection
      */
-    addCard(card) {
-        card.element.dataset.index = this.cards.length;
+    addCard(props) {
+        const item = this.cards.find(item => item.props.title === props.title);
+
+        if(item) {
+            return;
+        }
+        const card = new Card(props);
         this.container.appendChild(card.element);
         this.cards.push(card);
     }
 
+    deleteCard(props) {
+        const index = this.cards.findIndex(item => item.props.title === props.title);
 
-    deleteCard(cardIndex) {
-        const [card] = this.cards.splice(cardIndex, 1);
+        if(index < 0) {
+            return;
+        }
+
+        const [card] = this.cards.splice(index, 1);
         card.removeEvents();
         this.container.removeChild(card.element);
     }
@@ -90,7 +100,7 @@ const mountCategories = async (container) => {
             image: category.image
         };
 
-        cards.addCard(new Card(props));
+        cards.addCard(props);
     }
 
     cards.mount(container);
@@ -109,7 +119,7 @@ const mountTracks = async (container) => {
             image: track.image
         }
 
-        cards.addCard(new Card(props));
+        cards.addCard(props);
     }
 
     cards.mount(container);
