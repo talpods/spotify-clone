@@ -107,3 +107,6 @@ dist
 public/js/
 public/css/
 public/images/
+public/dev/css/
+public/dev/img/
+public/dev/js
