@@ -35,4 +35,8 @@ const redirect = {
     }
 };
 
+export {
+    locations
+};
+
 export default redirect;

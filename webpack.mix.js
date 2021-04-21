@@ -10,6 +10,7 @@ mix.js('src/js/cards.js', 'dev/js')
     .js('src/js/search.js', 'js')
     .js('src/js/playlist.js', 'js')
     .js('src/js/landing.js', 'js')
+    .js('src/js/login.js', 'js')
     .postCss("src/css/app.css", "css", [
         require("tailwindcss"),
     ])

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <script src="js/app.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,42 +12,43 @@
 
 <body class="bg-black font-sans">
 
-    <img class="block mx-auto my-auto py-8"
-        src="https://github.com/top-interns/spotify-clone/blob/main/public/img/logo.png?raw=true" alt="Topbeats Logo">
+    <form id="form">
+        <img class="block mx-auto my-auto py-8"
+            src="https://github.com/top-interns/spotify-clone/blob/main/public/img/logo.png?raw=true" alt="Topbeats Logo">
+
+        <div class="py-7 text-center">
+            <label class="block mb-2 text-center font-light focus:outline-none text-emerald-500">Email Address</label>
+            <input placeholder="Example@example.com" class="text-left px-6 rounded block mx-auto my-auto py-0.5"
+                type="email" required>
+
+        </div>
+        <div class="text-center">
+            <label class="block mb-2 text-center font-light focus:outline-none text-emerald-500">Password</label>
+            <input placeholder="insert Password" class="text-left block mx-auto my-auto  px-6 rounded py-0.5"
+                type="password" required>
+        </div>
 
 
-
-
-    <div class="py-7">
-        <p class="text-center font-light focus:outline-none text-emerald-500">Email Address</p>
-        <input placeholder="Example@example.com" class="text-left px-6 rounded block mx-auto my-auto py-0.5"
-            type="email">
-
-    </div>
-    <div class="">
-        <p class="text-center font-light focus:outline-none text-emerald-500">Password</p>
-        <input placeholder="insert Password" class="text-left block mx-auto my-auto  px-6 rounded py-0.5"
-            type="password">
-    </div>
-
-
-    <div class="flex justify-center items-center py-11">
-        <a href="home.html">
+        <div class="flex justify-center items-center py-11">
+            <!-- <a href="home.html"> -->
             <button
-                class="text-black text-xl text-center focus:outline-none font-bold bg-white px-10 py-1 border rounded-full">
+                class="text-black text-xl text-center focus:outline-none font-bold bg-white px-10 py-1 border rounded-full" id="login">
                 Log
                 In</button>
-        </a>
+            <!-- </a> -->
 
-    </div>
-    <p class="text-center text-xs focus:outline-none font-light text-emerald-500">Don't Have an Account?</p>
-    <div class="flex justify-center items-center py-4">
-        <a href="signup.html">
+        </div>
+        <p class="text-center text-xs focus:outline-none font-light text-emerald-500">Don't Have an Account?</p>
+        <div class="flex justify-center items-center py-4">
+            <!-- <a href="signup.html"> -->
             <button
-                class="text-black text-xl text-center focus:outline-none font-bold bg-white px-9 py-1 border rounded-full">Sign
+                class="text-black text-xl text-center focus:outline-none font-bold bg-white px-9 py-1 border rounded-full" id="signup">Sign
                 Up</button>
-        </a>
-    </div>
+            <!-- </a> -->
+        </div>
+
+    </form>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
