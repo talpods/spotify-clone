@@ -36,15 +36,22 @@ class Card extends Component {
     click(event) {
         // filter clicks form the button and let other events to pass
         // use optional chaining see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-        if(event.target?.parentElement?.dataset?.comment !== "card-btn") {
-            return;
-        }
+        
+        const {target} = event;
 
+        // check card button 
+        if (target.dataset?.comment != "card-btn" &&
+            target.parentElement?.dataset?.comment == "card-btn") {
+                return;
+            }
+
+    
         // augment event data with props and index
         // add card index to the event to identify which card was clicked
         event.card = {
             index: event.currentTarget?.dataset?.index,
-            props: {...this.props}
+            props: {...this.props},
+            action: "play"
         }
     }
 }
