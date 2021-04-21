@@ -22,7 +22,22 @@
             "comment": "login button",
             "tagName": "button",
             "className": "border border-white bg-white text-center text-black ml-auto px-10 py-1 rounded-full",
-            "textContent": "login"
+            "children": [
+                {
+                    "comment": "link",
+                    "tagName": "a",
+                    "className": "loginlink",
+                    "attributes": [
+                        {
+                            "name": "target",
+                            "value": "_self",
+                            "name": "herf",
+                            "value": "login.html"
+                        }
+                    ],
+                    "textContent": "Login"
+                }
+            ]
         }
     ]
 }
