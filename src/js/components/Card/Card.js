@@ -46,7 +46,6 @@ class Card extends Component {
             index: event.currentTarget?.dataset?.index,
             props: {...this.props},
             action: "play"
-
         }
     }
 }
