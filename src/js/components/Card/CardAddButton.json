@@ -1,0 +1,6 @@
+{
+    "comment": "card-btn",
+    "tagName": "button",
+    "className": "add-btn bg-gray-400 w-6 h-6 absolute rounded-full left-4 bottom-10 hover-target focus:outline-none",
+    "textContent": "+"
+}

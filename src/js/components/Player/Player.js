@@ -13,6 +13,7 @@ import PlayerInfo from './PlayerInfo';
 import TrackIterator from '../../lib/TrackIterator';
 
 
+
 class Player extends Component {
     constructor(props) {
 
